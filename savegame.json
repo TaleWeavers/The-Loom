@@ -1,0 +1,55 @@
+{
+    "Categories": [
+        "Items"
+    ],
+    "DropOnDeath": true,
+    "Icon": "Icons/ItemsGenerated/Ingredient_Bar_Adamantite.png",
+    "IconProperties": {
+        "Rotation": [
+            22.5,
+            45,
+            22.5
+        ],
+        "Scale": 1,
+        "Translation": [
+            0,
+            -3
+        ]
+    },
+    "ItemEntity": {
+        "ParticleSystemId": null
+    },
+    "ItemSoundSetId": "ISS_Items_Ingots",
+    "Model": "Resources/Materials/Ingot.blockymodel",
+    "PlayerAnimationsId": "Item",
+    "Recipe": {
+        "BenchRequirement": [
+            {
+                "Id": "Furnace",
+                "Type": "Processing"
+            }
+        ],
+        "Input": [
+            {
+                "ItemId": "Ore_Adamantite",
+                "Quantity": 1
+            }
+        ],
+        "OutputQuantity": 1,
+        "TimeSeconds": 20
+    },
+    "ResourceTypes": [
+        {
+            "Id": "Metal_Bars"
+        }
+    ],
+    "Tags": {
+        "Type": [
+            "Ingredient"
+        ]
+    },
+    "Texture": "Resources/Materials/Ingot_Textures/Adamantite.png",
+    "TranslationProperties": {
+        "Name": "server.items.Ingredient_Bar_Adamantite.name"
+    }
+}

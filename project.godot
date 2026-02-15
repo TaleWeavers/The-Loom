@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Hytale Asset Generator"
+run/main_scene="res://base.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Base="*uid://ew37tkyqc6iq"
+PopulatePath="*uid://c3pru44nmm7b5"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/FreeControl/plugin.cfg", "res://addons/collapsible_container/plugin.cfg", "res://addons/detomon.assorted-controls/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

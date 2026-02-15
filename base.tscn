@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://c48n0o3h3pi7k"]
+
+[ext_resource type="Script" uid="uid://ew37tkyqc6iq" path="res://base.gd" id="1_rpg24"]
+[ext_resource type="Script" uid="uid://c3pru44nmm7b5" path="res://PopulatePath.gd" id="2_3vi8l"]
+[ext_resource type="Texture2D" uid="uid://w3ee8js37us8" path="res://BG.png" id="2_21bcp"]
+[ext_resource type="Script" uid="uid://dtdo1jaxxvuub" path="res://build.gd" id="3_8rhti"]
+[ext_resource type="Texture2D" uid="uid://cndfgar0u7lva" path="res://BaseImages/Base_Ingot.png" id="3_ohhpf"]
+
+[node name="Base" type="Node" unique_id=291432916]
+script = ExtResource("1_rpg24")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1129331953]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1755449854]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1556850197]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_21bcp")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=200555441]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FileDialog" type="FileDialog" parent="CanvasLayer/Control" unique_id=937334672]
+oversampling_override = 1.0
+title = "Open a Directory"
+ok_button_text = "Accept"
+file_mode = 2
+access = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=879576211]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ModPath" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=2125353580]
+layout_mode = 2
+text = "Set Mod Path"
+
+[node name="PathText" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=1863643405]
+layout_mode = 2
+text = "Selected Path: Null"
+horizontal_alignment = 1
+
+[node name="Populate Path" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=54264374]
+layout_mode = 2
+text = "Populate Path"
+script = ExtResource("2_3vi8l")
+
+[node name="AssetName" type="LineEdit" parent="CanvasLayer/Control/VBoxContainer" unique_id=30460952]
+layout_mode = 2
+placeholder_text = "Asset Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1029254648]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=816636958]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1107323463]
+layout_mode = 2
+text = "Metal"
+horizontal_alignment = 1
+
+[node name="Ore" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1950981779]
+layout_mode = 2
+disabled = true
+text = "Ore"
+
+[node name="Ingot" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=190078631]
+layout_mode = 2
+text = "Ingot"
+
+[node name="Crushed Metal" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1917273074]
+layout_mode = 2
+text = "Crushed Metal"
+
+[node name="Crushed Ore" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1558730105]
+layout_mode = 2
+text = "Crushed Ore"
+
+[node name="Powder" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2040170030]
+layout_mode = 2
+text = "Powder"
+
+[node name="Molten" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=444952607]
+layout_mode = 2
+text = "Molten"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=736037933]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2010198937]
+layout_mode = 2
+text = "Deco Blocks"
+horizontal_alignment = 1
+
+[node name="MetalDecoBlocks" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2056162887]
+layout_mode = 2
+text = "Metal Deco Blocks"
+
+[node name="WoodDecoBlocks" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1164889931]
+layout_mode = 2
+disabled = true
+text = "Wood Deco Blocks"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=1065921018]
+layout_mode = 2
+
+[node name="Liquid" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=56917802]
+layout_mode = 2
+text = "Liquid"
+horizontal_alignment = 1
+
+[node name="Water" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=2090207552]
+layout_mode = 2
+disabled = true
+text = "Water"
+
+[node name="Tar" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=276559416]
+layout_mode = 2
+disabled = true
+text = "Tar"
+
+[node name="Slime" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1877314858]
+layout_mode = 2
+disabled = true
+text = "Slime"
+
+[node name="Poison" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=2008667295]
+layout_mode = 2
+disabled = true
+text = "Poison"
+
+[node name="Lava" type="CheckBox" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1106179385]
+layout_mode = 2
+disabled = true
+text = "Lava"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=714259029]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=172868922]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ColorBase" type="TextureRect" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/PanelContainer" unique_id=880690173]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("3_ohhpf")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=1152776322]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel" unique_id=1007609441]
+custom_minimum_size = Vector2(25, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer" unique_id=6067565]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="H" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer2" unique_id=1658906050]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "H:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="L" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer2" unique_id=1056541275]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+text = "L:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="S" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer2" unique_id=1707375138]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+text = "S:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer" unique_id=1024044307]
+custom_minimum_size = Vector2(160, 33)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer" unique_id=168564892]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="LSlider" type="HSlider" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer" unique_id=2061888996]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="SSliders" type="HSlider" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer" unique_id=2060399300]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer" unique_id=2114877969]
+visible = false
+layout_mode = 2
+edit_alpha = false
+edit_intensity = false
+can_add_swatches = false
+presets_visible = false
+
+[node name="Build" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=1938448384]
+layout_mode = 2
+text = "Build"
+script = ExtResource("3_8rhti")
+
+[connection signal="dir_selected" from="CanvasLayer/Control/FileDialog" to="." method="_on_file_dialog_dir_selected"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/ModPath" to="." method="_on_mod_path_pressed"]
+[connection signal="button_down" from="CanvasLayer/Control/VBoxContainer/Populate Path" to="." method="_on_populate_path_button_down"]
+[connection signal="text_changed" from="CanvasLayer/Control/VBoxContainer/AssetName" to="." method="_on_asset_name_text_changed"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Ore" to="." method="_on_ore_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Ingot" to="." method="_on_ingot_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Crushed Metal" to="." method="_on_crushed_metal_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Crushed Ore" to="." method="_on_crushed_ore_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Powder" to="." method="_on_powder_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Molten" to="." method="_on_molten_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer2/MetalDecoBlocks" to="." method="_on_metal_deco_blocks_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/VBoxContainer2/WoodDecoBlocks" to="." method="_on_wood_deco_blocks_toggled"]
+[connection signal="value_changed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer/LSlider" to="." method="_on_l_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer2/Panel/HBoxContainer/VBoxContainer/SSliders" to="." method="_on_s_sliders_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Build" to="." method="_on_build_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Build" to="CanvasLayer/Control/VBoxContainer/Build" method="_on_pressed"]

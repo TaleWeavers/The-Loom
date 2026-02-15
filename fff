@@ -1,0 +1,9 @@
+{
+    "Name": "Alex",
+    "hp": 95,
+    "inventory": [
+        "sword",
+        "shield"
+    ],
+    "level": 12
+}
