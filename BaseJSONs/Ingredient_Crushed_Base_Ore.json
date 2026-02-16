@@ -1,0 +1,41 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Ingredient_Crushed_Base_Ore.name"
+  },
+  "Categories": [
+    "Items",
+    "WovenLib.All",
+    "WovenLib.Crushed"
+  ],
+  "Model": "Resources/Materials/Crushed.blockymodel",
+  "Texture": "Resources/Materials/Crushed_Textures/Crushed_Base_Ore.png",
+  "ResourceTypes": [
+    {
+      "Id": "Metal_Crushed_Ore"
+    }
+  ],
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 1,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -3
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Ingredient_Crushed_Adamantite_Ore.png",
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Ingots",
+  "DropOnDeath": true
+}
