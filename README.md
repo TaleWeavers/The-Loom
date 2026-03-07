@@ -7,5 +7,5 @@ if you have any features requests or questions please put a post in the issues o
 if you are looking to help with this project or any other of our projects join our disocrd and ask about it
 
 
-#To-do
+# To-do
 - add resource look up tool
